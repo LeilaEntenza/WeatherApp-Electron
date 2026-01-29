@@ -6,9 +6,13 @@ const createWindow = () => {
         height: 600,
     })
 
-    win.loadFile('index.html');
+    win.loadFile('Weather.html');
 }
 
 app.whenReady().then(() => {
     createWindow()
+})
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') app.quit()
 })
