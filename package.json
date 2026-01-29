@@ -1,0 +1,24 @@
+{
+  "name": "weatherapp-electron",
+  "version": "1.0.0",
+  "description": "A nice weather app",
+  "homepage": "https://github.com/LeilaEntenza/WeatherApp-Electron#readme",
+  "bugs": {
+    "url": "https://github.com/LeilaEntenza/WeatherApp-Electron/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeilaEntenza/WeatherApp-Electron.git"
+  },
+  "license": "ISC",
+  "author": "Lei",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^40.1.0"
+  }
+}
