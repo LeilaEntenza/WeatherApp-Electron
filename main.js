@@ -13,7 +13,7 @@ const createWindow = () => {
     });
 
     win.loadFile('Weather.html');
-    win.setMenuBarVisibility(false);
+    win.setMenuBarVisibility(true);
 }
 
 app.whenReady().then(() => {
