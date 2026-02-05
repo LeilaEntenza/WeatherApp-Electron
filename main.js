@@ -4,16 +4,15 @@ const createWindow = () => {
     const win = new BrowserWindow({
         width: 600,
         height: 500,
-        frame: false,
         icon: 'Images/StrawberryCat.png',
         webPreferences:{
             nodeIntegration: true,
             contextIsolation: false
-        }
-    });
+        },
+        titleBarStyle: 'hiden',
+        ...(process.platform !== 'darwin' ? { titleBarOverlay: true } : {})    });
 
     win.loadFile('Weather.html');
-    win.setMenuBarVisibility(true);
 }
 
 app.whenReady().then(() => {
