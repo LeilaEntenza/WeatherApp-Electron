@@ -9,6 +9,8 @@ body {
     background-color: '9C02A7';
     padding: 0;
     margin: 0;
+    overflow-y: hidden;
+    border: 1px solid #48545c;
 }
 
 nav {
@@ -18,4 +20,27 @@ nav {
 
 :not(nav) {
     -webkit-app-region: no-drag;
+}
+
+#titlebar {
+  display: block;
+  position: fixed;
+  height: 32px;
+  width: calc(100% - 2px); /*Compensate for body 1px border*/
+  background: #254053;
+  padding: 4px;
+}
+
+#titlebar #drag-region {
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: drag;
+}
+
+
+#main {
+  height: calc(100% - 32px);
+  margin-top: 32px;
+  padding: 20px;
+  overflow-y: auto;
 }

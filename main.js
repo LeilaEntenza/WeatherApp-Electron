@@ -5,12 +5,13 @@ const createWindow = () => {
         width: 600,
         height: 500,
         icon: 'Images/StrawberryCat.png',
+        frame: false,
+        autoHideMenuBar: true,
         webPreferences:{
             nodeIntegration: true,
             contextIsolation: false
-        },
-        titleBarStyle: 'hiden',
-        ...(process.platform !== 'darwin' ? { titleBarOverlay: true } : {})    });
+        }
+    });
 
     win.loadFile('Weather.html');
 }
